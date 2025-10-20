@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"
+        href="https://is2-ssl.mzstatic.com/image/thumb/Purple69/v4/2b/d9/d1/2bd9d182-3d19-d65d-c60f-765c1bce6fb8/Todo.png/1200x630bb.png">
+    <link type="text/css" rel="stylesheet" href="../static/css/login.css" />
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <h2>Please Register</h2>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Click here to open a window to create an account</button>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/register" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close this window">&times;</span>
+            </div>
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <button type="submit">Create Account</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
